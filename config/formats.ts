@@ -25,8 +25,8 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen ?] Anything Goes",
 		desc: 'Any team obtainable in the game can be used',
-		mod: 'fangame',
-		ruleset: ['[Gen ?] AG']
+		mod: 'zgen x',
+		ruleset: ['Standard AG']
 	},
 
 	// Likeshop Spotlight
