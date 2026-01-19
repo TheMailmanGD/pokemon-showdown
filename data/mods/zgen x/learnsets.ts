@@ -93740,9 +93740,8 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			terablast: ["9M"],
 			thief: ["9M"],
 			thunderwave: ["9M"],
-		},
-		
-	}
+		},		
+	},
 	syclar: {
 		learnset: {
 			absorb: ["9L1", "8L1", "7L1"],
