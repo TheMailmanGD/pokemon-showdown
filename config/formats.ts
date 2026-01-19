@@ -19,6 +19,16 @@ The column value will be ignored for repeat sections.
 
 export const Formats: import('../sim/dex-formats').FormatList = [
 
+	{
+		section: "Fangame Formats",
+	},
+	{
+		name: "[Gen ?] Anything Goes",
+		desc: 'Any team obtainable in the game can be used',
+		mod: 'fangame',
+		ruleset: ['[Gen ?] AG']
+	},
+
 	// Likeshop Spotlight
 	///////////////////////////////////////////////////////////////////
 
