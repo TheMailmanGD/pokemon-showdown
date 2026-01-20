@@ -2471,6 +2471,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Gigaton Hammer",
 		shortDesc: "Cannot be selected the turn after it's used.",
 	},
+	gigatoncannon: {
+		name: "Gigaton Cannon",
+		shortDesc: "Cannot be selected the turn after it's used.",
+	},
 	gigavolthavoc: {
 		name: "Gigavolt Havoc",
 		shortDesc: "Power is equal to the base move's Z-Power.",

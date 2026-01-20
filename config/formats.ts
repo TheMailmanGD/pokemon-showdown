@@ -28,6 +28,18 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'zgen x',
 		ruleset: ['Standard AG']
 	},
+	{
+		name: "[Gen ?] Furret Only",
+		desc: "only furret",
+		mod: 'zgen x',
+		ruleset: ['Standard AG'],
+		onValidateSet(set) {
+			const species = this.dex.species.get(set.species);
+			if (species.name != 'Furret') {
+				return [`${species.name} is not furret.`];
+			}
+		},
+	},
 
 	// Likeshop Spotlight
 	///////////////////////////////////////////////////////////////////

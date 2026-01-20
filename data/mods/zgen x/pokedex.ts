@@ -18364,7 +18364,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Pink",
 		prevo: "Tinkatink",
 		evoLevel: 24,
-		evos: ["Tinkaton"],
+		evos: ["Tinkaton", "Tinkatank"],
 		eggGroups: ["Fairy"],
 	},
 	tinkaton: {
@@ -19598,7 +19598,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		name: "MissingNo.",
 		types: ["Bird", "Normal"],
 		baseStats: { hp: 33, atk: 136, def: 0, spa: 6, spd: 6, spe: 29 },
-		abilities: { 0: "" },
+		abilities: { 0: "Mold Breaker" },
 		heightm: 3,
 		weightkg: 1590.8,
 		color: "Gray",
