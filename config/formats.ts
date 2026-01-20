@@ -35,8 +35,10 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		ruleset: ['Standard AG'],
 		onValidateSet(set) {
 			const species = this.dex.species.get(set.species);
-			if (species.name != 'Furret') {
-				return [`${species.name} is not furret.`];
+			if (species.name === 'Amoonguss') {
+				return [`${species.name} might be furret.`];
+			} else if (species.name != 'Furret') {
+				return [`${species.name} might be furret`];
 			}
 		},
 	},
