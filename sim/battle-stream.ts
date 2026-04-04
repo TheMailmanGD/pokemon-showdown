@@ -274,7 +274,7 @@ export class BattleStream extends Streams.ObjectReadWriteStream<string> {
 		case 'hp':
 		case 'h': {
 			if (targets.length !== 3) {
-				battle.add("||<<< Error: Incorrect command use");
+				battle.add("||<<< Error: Format should be: hp PLAYER, POKEMON, HP");
 				return;
 			}
 			const [player, pokemon, value] = targets;
@@ -286,7 +286,7 @@ export class BattleStream extends Streams.ObjectReadWriteStream<string> {
 		case 'status':
 		case 's': {
 			if (targets.length !== 3) {
-				battle.add("||<<< Error: Incorrect command use");
+				battle.add("||<<< Error: Format should be: status PLAYER, POKEMON, STATUS");
 				return;
 			}
 			const [player, pokemon, value] = targets.map(toID);
@@ -301,7 +301,7 @@ export class BattleStream extends Streams.ObjectReadWriteStream<string> {
 		}
 		case 'pp': {
 			if (targets.length !== 4) {
-				battle.add("||<<< Error: Incorrect command use");
+				battle.add("||<<< Error: Format should be: pp PLAYER, POKEMON, MOVE, PP");
 				return;
 			}
 			const [player, pokemon, move, value] = targets;
@@ -317,7 +317,7 @@ export class BattleStream extends Streams.ObjectReadWriteStream<string> {
 		case 'boost':
 		case 'b': {
 			if (targets.length !== 4) {
-				battle.add("||<<< Error: Incorrect command use");
+				battle.add("||<<< Error: Format should be: boost PLAYER, POKEMON, STAT, VALUE");
 				return;
 			}
 			const [player, pokemon, stat, value] = targets;
@@ -333,7 +333,7 @@ export class BattleStream extends Streams.ObjectReadWriteStream<string> {
 		case 'volatile':
 		case 'v': {
 			if (targets.length !== 3) {
-				battle.add("||<<< Error: Incorrect command use");
+				battle.add("||<<< Error: Format should be: volatile PLAYER, POKEMON, VOLATILE");
 				return;
 			}
 			const [player, pokemon, value] = targets.map(toID);
@@ -344,7 +344,7 @@ export class BattleStream extends Streams.ObjectReadWriteStream<string> {
 		case 'sidecondition':
 		case 'sc': {
 			if (targets.length !== 2) {
-				battle.add("||<<< Error: Incorrect command use");
+				battle.add("||<<< Error: Format should be: sidecondition PLAYER, SIDECONDITION");
 				return;
 			}
 			const [player, value] = targets.map(toID);
@@ -355,7 +355,7 @@ export class BattleStream extends Streams.ObjectReadWriteStream<string> {
 		case 'fieldcondition': case 'pseudoweather':
 		case 'fc': {
 			if (targets.length !== 1) {
-				battle.add("||<<< Error: Incorrect command use");
+				battle.add("||<<< Error: Format should be: fieldcondition FIELD, PSEUDOWEATHER");
 				return;
 			}
 			const [value] = targets.map(toID);
@@ -365,7 +365,7 @@ export class BattleStream extends Streams.ObjectReadWriteStream<string> {
 		case 'weather':
 		case 'w': {
 			if (targets.length !== 1) {
-				battle.add("||<<< Error: Incorrect command use");
+				battle.add("||<<< Error: Format should be: weather FIELD, WEATHER");
 				return;
 			}
 			const [value] = targets.map(toID);
@@ -375,7 +375,7 @@ export class BattleStream extends Streams.ObjectReadWriteStream<string> {
 		case 'terrain':
 		case 't': {
 			if (targets.length !== 1) {
-				battle.add("||<<< Error: Incorrect command use");
+				battle.add("||<<< Error: Format should be: terrain FIELD, TERRAIN");
 				return;
 			}
 			const [value] = targets.map(toID);
