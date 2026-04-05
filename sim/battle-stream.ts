@@ -244,7 +244,7 @@ export class BattleStream extends Streams.ObjectReadWriteStream<string> {
 			[user, target] = Utils.splitFirst(target.slice(5), ',');
 			target = target.trim();
 		}
-		battle.add('error', `${user ? `[${user}] ` : ''}/editbattle ${target}`);
+		battle.add('html', Utils.html`<div class="message-warning">${user ? `[${user}] ` : ''}<strong>/editbattle</strong> ${target}</div>`);
 
 		let cmd;
 		[cmd, target] = Utils.splitFirst(target, ' ');
