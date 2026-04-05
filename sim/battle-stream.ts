@@ -14,32 +14,6 @@ import { Teams } from './teams';
 import { Battle, extractChannelMessages } from './battle';
 import type { ChoiceRequest } from './side';
 
-/**
- * Like string.split(delimiter), but only recognizes the first `limit`
- * delimiters (default 1).
- *
- * `"1 2 3 4".split(" ", 2) => ["1", "2"]`
- *
- * `Utils.splitFirst("1 2 3 4", " ", 1) => ["1", "2 3 4"]`
- *
- * Returns an array of length exactly limit + 1.
- */
-function splitFirst(str: string, delimiter: string, limit = 1) {
-	const splitStr: string[] = [];
-	while (splitStr.length < limit) {
-		const delimiterIndex = str.indexOf(delimiter);
-		if (delimiterIndex >= 0) {
-			splitStr.push(str.slice(0, delimiterIndex));
-			str = str.slice(delimiterIndex + delimiter.length);
-		} else {
-			splitStr.push(str);
-			str = '';
-		}
-	}
-	splitStr.push(str);
-	return splitStr;
-}
-
 export class BattleStream extends Streams.ObjectReadWriteStream<string> {
 	debug: boolean;
 	noCatch: boolean;
@@ -75,7 +49,7 @@ export class BattleStream extends Streams.ObjectReadWriteStream<string> {
 	_writeLines(chunk: string) {
 		for (const line of chunk.split('\n')) {
 			if (line.startsWith('>')) {
-				const [type, message] = splitFirst(line.slice(1), ' ');
+				const [type, message] = Utils.splitFirst(line.slice(1), ' ');
 				this._writeLine(type, message);
 			}
 		}
@@ -110,7 +84,7 @@ export class BattleStream extends Streams.ObjectReadWriteStream<string> {
 			this.battle = new Battle(options);
 			break;
 		case 'player':
-			const [slot, optionsText] = splitFirst(message, ' ');
+			const [slot, optionsText] = Utils.splitFirst(message, ' ');
 			this.battle!.setPlayer(slot as SideID, JSON.parse(optionsText));
 			break;
 		case 'p1':
@@ -265,7 +239,12 @@ export class BattleStream extends Streams.ObjectReadWriteStream<string> {
 			return out;
 		};
 
-		battle.add('', `/editbattle ${target}`);
+		let user = null;
+		if (target.startsWith('user:')) {
+			[user, target] = Utils.splitFirst(target.slice(5), ',');
+			target = target.trim();
+		}
+		battle.add('error', `${user ? `[${user}] ` : ''}/editbattle ${target}`);
 
 		let cmd;
 		[cmd, target] = Utils.splitFirst(target, ' ');
@@ -445,7 +424,7 @@ export function getPlayerStreams(stream: BattleStream) {
 	};
 	(async () => {
 		for await (const chunk of stream) {
-			const [type, data] = splitFirst(chunk, `\n`);
+			const [type, data] = Utils.splitFirst(chunk, `\n`);
 			switch (type) {
 			case 'update':
 				const channelMessages = extractChannelMessages(data, [-1, 0, 1, 2, 3, 4]);
@@ -457,7 +436,7 @@ export function getPlayerStreams(stream: BattleStream) {
 				streams.p4.push(channelMessages[4].join('\n'));
 				break;
 			case 'sideupdate':
-				const [side, sideData] = splitFirst(data, `\n`);
+				const [side, sideData] = Utils.splitFirst(data, `\n`);
 				streams[side as SideID].push(sideData);
 				break;
 			case 'end':
@@ -502,7 +481,7 @@ export abstract class BattlePlayer {
 	receiveLine(line: string) {
 		if (this.debug) console.log(line);
 		if (!line.startsWith('|')) return;
-		const [cmd, rest] = splitFirst(line.slice(1), '|');
+		const [cmd, rest] = Utils.splitFirst(line.slice(1), '|');
 		if (cmd === 'request') return this.receiveRequest(JSON.parse(rest));
 		if (cmd === 'error') return this.receiveError(new Error(rest));
 		this.log.push(line);

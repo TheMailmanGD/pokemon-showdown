@@ -1627,7 +1627,7 @@ export const commands: Chat.ChatCommands = {
 			throw new Chat.ErrorMessage("/editbattle - This is not a battle room.");
 		}
 		const battle = room.battle;
-		void battle.stream.write(`>editbattle ${target}`);
+		void battle.stream.write(`>editbattle user:${user.name}, ${target}`);
 	},
 	editbattlehelp: [
 		`/editbattle hp [player], [pokemon], [hp]`,
