@@ -467,4 +467,16 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
 			gigaimpact: ["9M"],
 		},
 	},
+	annihilape: {
+		inherit: true,
+		learnset: {
+			freezeray: ["9L0"],
+		},
+	},
+	clodsire: {
+		inherit: true,
+		learnset: {
+			ivorythorns: ["9L0"],
+		},
+	}
 };

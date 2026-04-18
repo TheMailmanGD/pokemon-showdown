@@ -28,6 +28,14 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'chaos',
 		ruleset: ['Standard AG'],
 	},
+	{
+		name: "[Gen 9] Chaos Custom Game",
+		mod: 'chaos',
+		debug: true,
+		battle: { trunc: Math.trunc },
+		// no restrictions, for serious (other than team preview)
+		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
+	},
 	// S/V Singles
 	///////////////////////////////////////////////////////////////////
 
@@ -211,17 +219,17 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		banlist: ['All Pokemon'],
 		unbanlist: [
 			'Caterpie', 'Metapod', 'Butterfree',
-			'Weedle', 'Kakuna', 'Beedrill', 'Mega Beedrill',
+			'Weedle', 'Kakuna', 'Beedrill', 'Beedrill-Mega',
 			'Paras', 'Parasect',
 			'Venonat', 'Venomoth',
-			'Scyther', 'Pinsir', 'Mega Pinsir',
+			'Scyther', 'Pinsir', 'Pinsir-Mega',
 			'Ledyba', 'Ledian',
 			'Spinarak', 'Ariados',
 			'Yanma',
 			'Pineco', 'Forretress',
-			'Scizor', 'Mega Scizor',
+			'Scizor', 'Scizor-Mega',
 			'Shuckle',
-			'Heracross', 'Mega Heracross',
+			'Heracross', 'Heracross-Mega',
 			'Wurmple', 'Silcoon', 'Beautifly', 'Cascoon', 'Dustox',
 			'Surskit', 'Masquerain',
 			'Nincada', 'Ninjask', 'Shedinja',
