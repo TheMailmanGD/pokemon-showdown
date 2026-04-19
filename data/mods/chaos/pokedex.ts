@@ -132,4 +132,97 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		prevo: "Avieerie",
 		eggGroups: ["Undiscovered"],
 	},
+	oddish: {
+		inherit: true,
+		num: 10010,
+	},
+	gloom: {
+		inherit: true,
+		num: 10011,
+	},
+	vileplume: {
+		inherit: true,
+		num: 10012,
+		baseStats: { hp: 75, atk: 80, def: 85, spa: 120, spd: 90, spe: 50 },
+	},
+	bellossom: {
+		inherit: true,
+		num: 10013,
+		baseStats: { hp: 75, atk: 80, def: 95, spa: 90, spd: 100, spe: 80 },
+	},
+	nymble: {
+		inherit: true,
+		num: 10014,
+	},
+	lokix: {
+		inherit: true,
+		num: 10015,
+		otherFormes: ["Lokix-Mega"],
+		formeOrder: ["Lokix", "Lokix-Mega"],
+	},
+	lokixmega: {
+		num: 10016,
+		name: "Lokix-Mega",
+		baseSpecies: "Lokix",
+		forme: "Mega",
+		types: ["Bug", "Dark"],
+		baseStats: { hp: 71, atk: 132, def: 88, spa: 62, spd: 75, spe: 122 },
+		abilities: { 0: "Lasting Impression" },
+		heightm: 2.3,
+		weightkg: 30.5,
+		color: "Black",
+		eggGroups: ["Undiscovered"],
+		requiredItem: "Lokixite",
+		gen: 9,
+	},
+	rookidee: {
+		inherit: true,
+		num: 10017,
+	},
+	corvisquire: {
+		inherit: true,
+		num: 10018,
+	},
+	corviknight: {
+		inherit: true,
+		num: 10019,
+	},
+	magikarp: {
+		inherit: true,
+		num: 10020,
+	},
+	gyarados: {
+		inherit: true,
+		num: 10021,
+	},
+	gyaradosmega: {
+		inherit: true,
+		num: 10022,
+	},
+	foongus: {
+		inherit: true,
+		num: 10023,
+	},
+	amoongus: {
+		inherit: true,
+		num: 10024,
+	},
+	wooper: {
+		inherit: true,
+		num: 10025,
+	},
+	wooperpaldea: {
+		inherit: true,
+		num: 10026,
+	},
+	quagsire: {
+		inherit: true,
+		num: 10027,
+		baseStats: { hp: 95, atk: 60, def: 100, spa: 90, spd: 65, spe: 20 },
+		abilities: { 0: "Regenerator", 1: "Sap Sipper", H: "Unaware" },
+	},
+	clodsire: {
+		inherit: true,
+		num: 10028,
+	},
 };

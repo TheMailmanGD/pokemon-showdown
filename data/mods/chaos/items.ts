@@ -40,5 +40,24 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 		},
 		num: 10002,
 		gen: 9,
+	},
+	// healingopal: {
+	// 	name: "Healing Opal",
+	// 	fling: {
+	// 		basePower: 100,
+	// 	},
+	// 	num: 10003,
+	// 	gen: 9,
+	// }
+	lokixite: {
+		name: "Lokixite",
+		spritenum: 0,
+		megaStone: { "Lokix": "Lokix-Mega" },
+		itemUser: ["Lokix"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: 10004,
+		gen: 9,
 	}
 };
