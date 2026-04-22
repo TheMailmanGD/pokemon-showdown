@@ -1877,3 +1877,65 @@ Jolly Nature
 - Extreme Speed  
 - Earthquake  
 """
+
+Ground = """
+Clodsire @ Black Sludge  
+Ability: Unaware  
+Tera Type: Poison  
+EVs: 252 HP / 128 Def / 128 SpD  
+Impish Nature  
+- Toxic  
+- Toxic Spikes  
+- Recover  
+- Earthquake  
+
+Ting-Lu @ Assault Vest  
+Ability: Vessel of Ruin  
+Tera Type: Dark  
+EVs: 252 HP / 252 Def / 4 SpD  
+- Fissure  
+- Ruination  
+- Stomping Tantrum  
+- Throat Chop  
+
+Garchomp @ Rocky Helmet  
+Ability: Rough Skin  
+Tera Type: Ghost  
+EVs: 252 HP / 216 Def / 40 Spe  
+Impish Nature  
+- Earthquake  
+- Dragon Tail  
+- Stealth Rock  
+- Spikes  
+
+Groudon @ Leftovers  
+Ability: Drought  
+Tera Type: Fire  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Earthquake  
+- Bulk Up  
+- Heat Crash  
+- Stone Edge  
+
+Ursaluna-Bloodmoon @ Leftovers  
+Ability: Mind's Eye  
+Tera Type: Normal  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Blood Moon  
+- Calm Mind  
+- Moonblast  
+- Earth Power  
+
+Great Tusk @ Booster Energy  
+Ability: Protosynthesis  
+Tera Type: Ground  
+EVs: 252 Atk / 252 Def / 4 SpD  
+Adamant Nature  
+- Rapid Spin  
+- Bulk Up  
+- Earthquake  
+- Close Combat  
+"""
