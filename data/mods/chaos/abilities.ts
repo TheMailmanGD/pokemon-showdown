@@ -44,13 +44,13 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		},
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, attacker, defender, move) {
-			if (attacker.hasType('Dragon') && this.field.isWeather('dragontempest')) {
+			if (this.field.isWeather('dragontempest')) {
 				return this.chainModify(1.5);
 			}
 		},
 		onModifySpAPriority: 5,
 		onModifySpA(spa, attacker, defender, move) {
-			if (attacker.hasType('Dragon') && this.field.isWeather('dragontempest')) {
+			if (this.field.isWeather('dragontempest')) {
 				return this.chainModify(1.5);
 			}
 		},

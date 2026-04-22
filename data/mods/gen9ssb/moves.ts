@@ -2752,6 +2752,22 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		type: "Ice",
 	},
 
+	// Julian P. Roblox
+	furyerswipes: {
+		accuracy: 75,
+		basePower: 40,
+		category: "Physical",
+		name: "Furyer Swipes",
+		shortDesc: "grrr",
+		desc: "lore accurate fury swipes",
+		pp: 5,
+		priority: 0,
+		multihit: [2, 5],
+		flags: {contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		target: "normal",
+		type: "Normal",
+	},
+
 	// Kalalokki
 	knotweak: {
 		accuracy: 80,

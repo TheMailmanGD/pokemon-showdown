@@ -463,6 +463,13 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		abilities: { 0: "Fortifying Frost" },
 	},
 
+	// Julian P. roblox
+	skitty: {
+		inherit: true,
+		baseStats: { hp: 80, atk: 100, def: 75, spa: 2, spd: 75, spe: 125 },
+		abilities: { 0: "Misery Dungeon"}
+	},
+
 	// Kalalokki
 	flamigo: {
 		inherit: true,

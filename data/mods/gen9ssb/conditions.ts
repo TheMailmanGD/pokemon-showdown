@@ -1175,6 +1175,18 @@ export const Conditions: { [id: IDEntry]: ModdedConditionData & { innateName?: s
 			this.add(`c:|${getName('J0rdy004 ♫')}|So softly a supergod dies...`);
 		},
 	},
+	julianproblox: {
+		noCopy: true,
+		onStart(pokemon) {
+			this.add(`c:|${getName('Julian P. Roblox')}|`);
+		},
+		onSwitchOut() {
+			this.add(`c:|${getName('Julian P. Roblox')}|`);
+		},
+		onFaint() {
+			this.add(`c:|${getName('Julian P. Roblox')}|`);
+		},
+	},
 	kalalokki: {
 		noCopy: true,
 		onStart(pokemon) {

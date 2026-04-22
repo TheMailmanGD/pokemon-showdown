@@ -493,6 +493,12 @@ export const ssbSets: SSBSets = {
 		signatureMove: 'Snowy Samba',
 		evs: { spa: 252, spd: 4, spe: 252 }, nature: 'Timid', shiny: 4,
 	},
+	'Julian P. Roblox': {
+		species: 'Skitty', ability: 'Misery Dungeon', item: 'Metronome', gender: 'F',
+		moves: ['Quick Attack', 'Close Combat', 'Coil'],
+		signatureMove: 'Furyer Swipes',
+		evs: { hp: 1, atk: 252, def: 1, spa: 1, spd: 1, spe: 252 }, nature: 'Adamant',
+	},
 	Kalalokki: {
 		species: 'Flamigo', ability: 'Scrappy', item: 'Choice Band', gender: 'M',
 		moves: ['Brave Bird', 'Sucker Punch', ['Drain Punch', 'Rapid Spin']],
